@@ -1,0 +1,73 @@
+<%- include("../partials/_header.ejs") %>
+
+<div class="container col-18 text-center">
+  <div class="row align-items-start">
+    <section class="content">
+      <header id="header">
+        <nav>
+          <h1>Update Expenses</h1>
+        </nav>
+      </header>
+
+      <a href="/summary">Back</a>
+
+      <br /><br />
+
+      <h3>Update Expenses Details</h3>
+      <span>Use the below form to update expense details</span>
+
+      <form action="/summary/update/<%= expense._id %>?_method=PUT" method="POST" id="update_expense" class="row g-3 align-items-center">
+        <div class="new_expense">
+          <div class="col-md-4">
+            <label for="date" class="col-form-label">Date: </label>
+            <input type="date" data-date="" data-date-format="DD MMMM YYYY" name="date" value="<%= expense.date %>" class="form-control" required/>
+          </div>
+          <div class="col-md-4">
+            <label for="amount" class="form-label">Amount: </label>
+            <input
+              type="number"
+              name="amount"
+              value="<%= expense.amount %>"
+              placeholder="RM"
+              class="form-control"
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="category" class="form-label">Category: </label>
+            <input type="text" name="category" list="category" value="<%= expense.category %>" class="form-control" />
+            <datalist id="category">
+              <option value="Food"></option>
+              <option value="Personal"></option>
+              <option value="Shopping"></option>
+              <option value="Gifts"></option>
+              <option value="Travel"></option>
+              <option value="Health/Medical"></option>
+              <option value="Transportation"></option>
+            </datalist>
+          </div>
+          <div class="col-10">
+            <label for="description" class="form-label">Descriptions: </label>
+            <input
+              rows="3"
+              type="text"
+              name="descriptions"
+              value="<%= expense.descriptions %>"
+              placeholder="Descriptions"
+              class="form-control"
+            />
+          </div>
+          <br /><br />
+          <div>
+        
+            <button type="submit" class="btn btn-success">Update</button>
+          </div>
+        </div>
+      </form>
+
+      <br /><br />
+
+    </section>
+  </div>
+</div>
+
+<%- include("../partials/_footer.ejs") %>

@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap");
+
+:root {
+  --dark: #2b2d42;
+  --light: #adb5bd;
+  --border: #dee2e6;
+  --border-btn: #edf2f4;
+}
+
+/* *{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+*/
+
+a {
+  /* text-decoration: none;
+  font-family: 'PT Sans', sans-serif; */
+  box-shadow: #2b2d42;
+}
+
+#header nav {
+  background-color: #3a5c4a;
+  color: antiquewhite;
+  padding: 1em 0;
+  width: 100%;
+  border-radius: 10px;
+}
+
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+img {
+  width: 90px;
+}
+
+body {
+  /* background-image: url("../images/background.png");
+  background-size: cover; */
+  padding-top: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  background-color: rgba(245, 245, 220, 0.705);
+}
+
+h4 {
+  font-style: solid;
+  /* font-family: "Barlow", sans-serif; */
+  /* font-family: "PT Sans", sans-serif; */
+}
+
+.navigation {
+  /* margin-left: 0em;
+  padding-left: 10rem;
+  border-color: black;
+  border: 20px; */
+  width: fit-content;
+  margin-left: 0;
+  margin-right: 0;
+  /* background-color: antiquewhite; */
+}
+
+/* @media only screen and (max-width: 1024px){
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+   thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr { border: 1px solid var(--border);}
+
+    td{
+        border: none;
+        position: relative;
+
+}
+} */
+
+#add_expense {
+  justify-content: center;
+  align-items: center;
+}
